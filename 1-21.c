@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-#define MAXLENGTH 1000
-#define LIMIT 80
-
-int readLine(char *line, int maxLength);
-
 int main(void)
 {
     int c;
