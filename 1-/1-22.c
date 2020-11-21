@@ -1,3 +1,5 @@
+/* not completly working */
+
 #include <stdio.h>
 
 #define MAXLENGTH 1000

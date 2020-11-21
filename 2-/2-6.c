@@ -18,7 +18,8 @@ int main(void) {
 int setBits(int x, int y, int p, int n) {
 	int result;
 
-	result = ((y & (puiss(2, n) - 1)) << (p + 1 - n)) | ((~((puiss(2, n) - 1) << (p + 1 - n))) & x);
+	result = ((y & (puiss(2, n) - 1)) << (p + 1 - n)) |
+		((~((puiss(2, n) - 1) << (p + 1 - n))) & x);
 
 	return result;
 }

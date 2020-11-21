@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 #define MAXLENGTH 1000
-#define LIMIT 80
 
+int deleteSpaces(char s[]); 
 int readLine(char *line, int maxLength);
 
 int main(void)
@@ -11,7 +11,9 @@ int main(void)
     char line[MAXLENGTH];
 
     while((length = readLine(line, MAXLENGTH))) {
-        if(length > LIMIT) printf("%s", line);
+		if(deleteSpaces(line) > 0) {
+			printf("%s", line);
+		}
     }
 
     return 0;
@@ -31,4 +33,21 @@ int readLine(char line[], int max) {
     line[i] = '\0';
 
     return i;
+}
+
+int deleteSpaces(char s[]) {
+	int i;
+
+	i = 0;
+	while(s[i] != '\n') ++i;
+
+	for(i--; i >= 0 && (s[i] == ' ' || s[i] == '\t'); --i); 
+
+	if(i >= 0) {
+		++i;
+		s[i] = '\n';
+		++i;
+		s[i] = '\0';
+	}
+	return i;
 }

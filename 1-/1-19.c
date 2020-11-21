@@ -30,7 +30,6 @@ int readLine(char line[], int max) {
 
 void reverse(char line[], int max) {
     char s[MAXLENGTH];
-    char c;
     int i, j;
     j = 0;
 
