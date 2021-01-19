@@ -5,8 +5,7 @@ int main(void)
     int c;
     int spaces = 0;
     int tabSize = 4;
-
-
+    
     int j;
 
     while((c = getchar()) != EOF) {
